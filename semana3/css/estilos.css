@@ -1,0 +1,16 @@
+h1{color:blueviolet; text-align:center;font-family: fantasy;}
+p{color:black;text-align: center;font-family: fantasy;}
+section{color:crimson;text-align:center;}
+#requisitos{color:yellowgreen;text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.fondogris{background-color: beige;}
+.cursiva{font-style: italic;}
+div{width: 20vw;height: 20vh;background-color: rgb(0, 0, 0);float: left;clear:left;}
+#uno{width: 20vw;height: 20vh;background-color: rgb(21, 66, 151);float: left;}
+#dos{width: 20vw;height: 20vh;background-color: rgb(6, 31, 77);clear:left;float:left}
+#tres{width: 20vw;height: 20vh;background-color: rgb(3, 13, 32);clear: left;float: left;}
+#cuatro{color: aliceblue;}
+#cinco{clear:left}
+.texto{
+    font-size: 10vw;
+    text-align: center;
+}
