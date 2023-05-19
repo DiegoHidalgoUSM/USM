@@ -10,5 +10,12 @@
 </head>
 <body>
     <h1>PROFESORES TIO</h>
+    <a href="{% url 'nuevo_profesor' %}"> Nuevo profesor</a>
+    <h1>Profesores</h>
+        <h1>Profesores</h>
+            {% for pr in profesores %}
+            <li> {{pr.nombre}} </li>
+            {% endfor %}
+    <BR>
 </body>
 </html>

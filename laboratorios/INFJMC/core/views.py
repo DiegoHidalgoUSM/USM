@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from core.models import Carrera
+from core.models import Carrera,docente
 
 
 def home(request):
@@ -18,7 +18,31 @@ def carrera(request):
 
 
 def profe(request):
+    profesores= docente.objects.all()
+    data={
+        'profesores':profesores
+    }
     #return HttpResponse("<h1>Profesores<h1/>" + "<p> SANTUTU MI PROFE <p/>" )
-    return render(request,'core/profesores.html')
+    return render(request,'core/profesores.html',data)
+
+def nueva_carrera(request):
+    if request.POST:
+        nombre=request.POST["nombre"]
+        ident=request.POST["id"]
+        duracion=request.POST["duracion"]
+        c=Carrera(codigo=ident,nombre_carrera=nombre,duracion_semestres=duracion)
+        c.save()
+        return redirect(carrera)
+    return render(request,'core/nueva_carrera.html')
+
+def nuevo_profesor(request):
+    if request.POST:
+        nombre=request.POST["nombre"]
+        apellidos=request.POST["apellido"]
+        email= request.POST["email"]
+        c=docente(nombre=nombre,apellido=apellidos,email=email)
+        c.save()
+        return redirect(profe)
+    return render(request,'core/nuevo_profesor.html')
 
 

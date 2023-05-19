@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo profesor</title>
+</head>
+<body>
+    <h1>Nuevo Profesor</h1>
+    <form method="post" action="{% url 'nuevo_profesor' %}">
+        {% csrf_token %}
+        Nombre del profesor: <input id="nombre" name="nombre" type="text" aria-busy=""> <br><br>
+        Apellido del profesor: <input id="apellido" name="apellido" type="text" aria-busy=""> <br><br>
+        Email del profesor: <input id="email" name="email" type="text" aria-busy=""> <br><br>
+         <input type="submit"value="Estoy en mi peak">
+
+    </form>
+
+</body>
+</html>

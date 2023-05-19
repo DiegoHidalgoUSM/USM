@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nueva carrera</title>
+</head>
+<body>
+    <h1>Nueva carrera</h1>
+    <form method="post" action="{% url 'nueva_carrera' %}">
+        {% csrf_token %}
+        Nombre de Carrera: <input id="nombre" name="nombre" type="text" aria-busy=""> <br><br>
+        ID de carrera: <input id="id" name="id" type="text" ><br><br>
+        Numero de semestres <input id="duracion" name="duracion" type="number"><br><br>
+         <input type="submit"value="Yo solamente grabo las canciones, ellas se pegan solas">
+
+    </form>
+
+</body>
+</html>
